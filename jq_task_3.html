@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <style>
+    #block {
+      width: 250px;
+      height: 250px;
+      border: 1px solid #000;
+    }
+
+    .white {
+      background-color: white;
+    }
+    .red {
+      background: red;
+    }
+    .green {
+      background-color: green;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .pink {
+      background-color: pink;
+    }
+    .black {
+      background-color: black;
+    }
+    .orange {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="left">в лево</button>
+  <button id="right">в право</button>
+  <div id="block"></div>
+
+
+
+  <script>
+    var block = $("#block");
+    var left = $("#left");
+    var right = $("#right");
+
+    var colors = ['white', 'red', 'green', 'blue', 'pink', 'black', 'orange'];
+    var index = 0;
+    var colorsLength = colors.length - 1;
+
+
+    block.addClass(colors[index]);
+    left.click(function() {
+      if (index > 0) {
+        var prevIndex = index;
+        index = index - 1;
+
+        block
+            .removeClass(colors[prevIndex])
+            .addClass(colors[index]);
+      } else {
+        index = colorsLength;
+
+        block
+            .addClass(colors[index])
+            .removeClass(colors[0]);
+      }
+    });
+
+
+    right.click(function() {
+      if (index < colorsLength ) {
+        var prevIndex = index;
+        index = index + 1;
+
+        block
+            .removeClass(colors[prevIndex])
+            .addClass(colors[index]);
+      } else {
+        index = 0;
+
+        block
+            .removeClass(colors[colorsLength])
+            .addClass(colors[index]);
+      }
+    });
+
+  </script>
+</body>
+</html>

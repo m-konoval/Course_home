@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div>
+    <button id="plus">Плюс</button>
+    <button id="minus">Мінус</button>
+    <button id="refresh">результат</button>
+  </div>
+
+  <script>
+    var plus = $("#plus");
+    var minus = $("#minus");
+    var refresh = $("#refresh");
+    var resultValue = 0;
+
+
+    plus.click(function() {
+      if( resultValue < 10 ) {
+        resultValue = resultValue + 1;
+      } else {
+        resultValue = 0;
+      }
+
+      console.log(resultValue);
+    });
+
+
+    minus.click(function() {
+      if( resultValue > -10 ) {
+        resultValue = resultValue - 1;
+      } else {
+        resultValue = 0;
+      }
+
+      console.log(resultValue);
+    });
+
+
+    refresh.click(function() {
+      resultValue = 0;
+      console.log(resultValue);
+    });
+  </script>
+</body>
+</html>

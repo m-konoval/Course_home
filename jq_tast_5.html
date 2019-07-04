@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <style>
+    #block {
+      width: 500;
+      min-height: 200px;
+      border: 1px solid red;
+      margin: 20px 0 30px;
+    }
+
+    p {
+      border-bottom: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="block"></div>
+
+  <p> 1111 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea tenetur nihil in enim quasi ullam ut ducimus rerum recusandae minima?</p>
+  <p> 2222 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil doloremque aspernatur repellat cumque porro sint asperiores consequatur! Adipisci porro perferendis consequuntur dicta commodi ipsam facere accusamus vitae voluptate, expedita vero esse ducimus cumque a suscipit libero non animi architecto?</p>
+  <p> 3333 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime minima velit sint. Laudantium dicta optio provident culpa consectetur. Modi ad ipsam quibusdam totam libero consequuntur soluta eos earum, amet vero!</p>
+  <p> 4444 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorem, sunt eveniet laborum recusandae labore velit rerum expedita dolores consequatur hic vero animi eaque. Libero.</p>
+  <p> 5555 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, ex! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi ipsa tempora, itaque atque dolorem provident tempore iste labore sunt quibusdam quo porro quis, nam dignissimos praesentium fugit tenetur sint repudiandae, modi eos placeat rerum magni ea. Vel in illo inventore et veritatis, distinctio sed harum excepturi, deserunt non quos aliquid.</p>
+  <p> 6666 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, ex! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed obcaecati eos ut corrupti molestiae. Eligendi repellat iste laboriosam veniam dolorum, deleniti voluptatibus exercitationem illum placeat dolore maiores nemo, magni qui nobis similique doloremque!</p>
+
+  <script>
+    var block = $("#block");
+    var paragraph = $("p");
+
+    paragraph.click(function(event) {
+      var paragraphText = $(event.target).text();
+
+      block
+          .text("")
+          .text(paragraphText);
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <style>
+    .hover {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint eligendi, ut sunt animi repellendus vitae molestias necessitatibus possimus harum aspernatur, sapiente similique eius sed cupiditate, impedit amet quisquam. Totam odio esse corrupti saepe culpa maxime alias rem suscipit in dolores rerum provident est magni, eos sequi ducimus accusamus repellendus, maiores, error aliquid laudantium nulla architecto! Unde reprehenderit eum totam necessitatibus dolorem reiciendis placeat est laborum tempora quam obcaecati praesentium odit voluptates quisquam, beatae explicabo sequi, doloremque dolores vel non sint aliquam facere iure? Impedit, doloribus cumque provident ipsum aliquid harum aliquam nesciunt adipisci sapiente alias, consequatur quas quasi libero culpa.</p>
+
+  <script>
+    var paragraph = $("p");
+    var prevContent = paragraph.text();
+
+    //paragraph.text("");
+
+    for( var i = 0; i < prevContent.length; i++ ) {
+      var letter = prevContent[i];
+      var span = $("<span>");
+
+      span.text(letter);
+      paragraph.append(span);
+    }
+
+    $("span").hover(function(event) {
+      var self = $(this);
+
+      self.toggleClass("hover");
+    });
+
+  </script>
+</body>
+</html>
